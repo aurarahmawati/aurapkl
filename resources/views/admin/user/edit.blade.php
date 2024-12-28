@@ -36,13 +36,13 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Passsword</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="password1" required>
+                            <input type="text" class="form-control" name="password1" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Masukkan Password lagi</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="password2" required>
+                            <input type="text" class="form-control" name="password2" >
                         </div>
                     </div>
                     
@@ -53,6 +53,18 @@
                                 <option value="">-pilih-</option>
                                 <option value="admin" {{$data->roles == 'admin' ? 'selected':''}}>admin</option>
                                 <option value="pegawai"  {{$data->roles == 'pegawai' ? 'selected':''}}>pegawai</option>
+                            </select>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label">Pilih Pegawai</label>
+                        <div class="col-sm-10">
+                            <select name="pegawai_id" class="form-control">
+                                <option value="">-pilih-</option>
+                                @foreach($pegawai as $peg)
+                                   <option value="{{$peg->id}}" {{$data->pegawai_id == $peg->id ? 'selected':''}}>{{$peg->nama}}</option>
+                                 @endforeach
                             </select>
                         </div>
                     </div>

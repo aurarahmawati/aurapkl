@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use App\Models\Pegawai;
 
 
 class UserController extends Controller
@@ -59,7 +60,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $data = User::find($id);
-        return view('admin.user.edit', compact('data'));
+        $pegawai = Pegawai::get();
+        return view('admin.user.edit', compact('data', 'pegawai'));
     }
     public function update(Request $req, $id)
     {
@@ -69,6 +71,7 @@ class UserController extends Controller
 
             $data->name = $req->name;
             $data->roles = $req->roles;
+            $data->pegawai_id = $req->pegawai_id;
             $data->save();
             Session::flash('success', 'Berhasil Diupdate');
             return redirect('/admin/data/user');
@@ -82,6 +85,7 @@ class UserController extends Controller
                 $data->password = bcrypt($req->password1);
                 $data->name = $req->name;
                 $data->roles = $req->roles;
+                $data->pegawai_id = $req->pegawai_id;
                 $data->save();
                 Session::flash('success', 'Berhasil Diupdate, password : ' . $req->password1);
                 return redirect('/admin/data/user');

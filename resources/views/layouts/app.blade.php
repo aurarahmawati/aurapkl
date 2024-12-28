@@ -33,12 +33,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header" style="background-color: #feba00">
 
     <!-- Logo -->
-    <a href="#" class="logo" style="background-color: #fea500">
+    @if(Auth::user()->roles == 'admin')
+
+ <a href="#" class="logo" style="background-color: #fea500">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">Admin</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Admin</b></span>
     </a>
+
+@else
+ <a href="#" class="logo" style="background-color: #fea500">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">Petugas</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Petugas</b></span>
+    </a>
+@endif
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation"  style="background-color: #fea500">

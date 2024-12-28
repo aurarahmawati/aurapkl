@@ -1,3 +1,4 @@
+@if(Auth::user()->roles == 'admin')
 <section class="sidebar">
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
@@ -11,3 +12,15 @@
     </ul>
     
 </section>
+@else
+<section class="sidebar">
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu" data-widget="tree">
+    <li class="header">MENU UTAMA</li>
+    <li class="{{ (request()->is('pegawai')) ? 'active' : '' }}"><a href="/admin"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
+    <li class="{{ (request()->is('pegawai/data/okb*')) ? 'active' : '' }}"><a href="/pegawai/data/okb"><i class="fa fa-users"></i> <span>Input OKB</span></a></li>
+    <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
+    </ul>
+    
+</section>
+@endif
