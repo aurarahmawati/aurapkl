@@ -10,5 +10,4 @@ class OKB extends Model
     use HasFactory;
     protected $table = 'okb';
     protected $guarded = ['id'];
-    public $timestamps = false;
 }

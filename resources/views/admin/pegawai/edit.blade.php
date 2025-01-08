@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">NIP</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nip" required value="{{$data->nip}}">
+                            <input type="text" class="form-control" name="nip" value="{{$data->nip}}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -64,13 +64,13 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">pangkat</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pangkat" required value="{{$data->pangkat}}">
+                            <input type="text" class="form-control" name="pangkat" value="{{$data->pangkat}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">golongan</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="golongan" required value="{{$data->golongan}}">
+                            <input type="text" class="form-control" name="golongan"  value="{{$data->golongan}}">
                         </div>
                     </div>
                     <div class="form-group">

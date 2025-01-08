@@ -20,12 +20,7 @@ class PegawaiController extends Controller
     }
     public function simpan(Request $req)
     {
-        $check = Pegawai::where('nip', $req->nip)->first();
-        if ($check != null) {
-            Session::flash('warning', 'nip Sudah ada');
-            $req->flash();
-            return back();
-        } else {
+        if ($req->nip == null) {
             DB::beginTransaction();
 
             try {
@@ -41,6 +36,31 @@ class PegawaiController extends Controller
                 DB::rollback();
                 Session::flash('error', 'Gagal sistem');
                 return back();
+            }
+        } else {
+
+            $check = Pegawai::where('nip', $req->nip)->first();
+            if ($check != null) {
+                Session::flash('warning', 'nip Sudah ada');
+                $req->flash();
+                return back();
+            } else {
+                DB::beginTransaction();
+
+                try {
+
+                    Pegawai::create($req->all());
+
+                    DB::commit();
+
+                    Session::flash('success', 'berhasil di simpan');
+                    return redirect('/admin/data/pegawai');
+                } catch (\Exception $e) {
+
+                    DB::rollback();
+                    Session::flash('error', 'Gagal sistem');
+                    return back();
+                }
             }
         }
     }
@@ -60,5 +80,19 @@ class PegawaiController extends Controller
     {
         $data = Pegawai::find($id)->delete();
         return back();
+    }
+
+    public function cari()
+    {
+        $cari = request()->get('cari');
+        $data = Pegawai::where('nama', 'LIKE', '%' . $cari . '%')->get();
+        return view('admin.pegawai.index', compact('data'));
+    }
+
+    public function detail($id)
+    {
+        $data = Pegawai::find($id);
+
+        return view('admin.pegawai.detail', compact('data'));
     }
 }

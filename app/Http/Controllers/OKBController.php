@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\OKB;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -14,36 +16,36 @@ class OKBController extends Controller
         $data = OKB::paginate(10);
         return view('pegawai.okb.index', compact('data'));
     }
+    public function print($id)
+    {
+        $data = OKB::find($id);
+        $filename = Carbon::now()->format('d-m-Y-H-i-s') . '_laporanharian.pdf';
+
+        $pdf = Pdf::loadView('pdf.laporanharian', compact('data'))->setOption([
+            'enable_remote' => true,
+        ]);
+        return $pdf->stream($filename);
+    }
     public function tambah()
     {
         return view('pegawai.okb.create');
     }
+
     public function simpan(Request $req)
     {
-        $check = OKB::where('nip', $req->nip)->first();
-        if ($check != null) {
-            Session::flash('warning', 'nip Sudah ada');
-            $req->flash();
-            return back();
+        if ($req->file == null) {
+            $filename = null;
         } else {
-            DB::beginTransaction();
-
-            try {
-
-                OKB::create($req->all());
-
-                DB::commit();
-
-                Session::flash('success', 'berhasil di simpan');
-                return redirect('/pegawai/data/okb');
-            } catch (\Exception $e) {
-
-                DB::rollback();
-                Session::flash('error', 'Gagal sistem');
-                return back();
-            }
+            $filename = time() . '_' . $req->file->getClientOriginalName();
+            $req->file('file')->storeAs('uploads', $filename, 'public');
         }
+        $param = $req->all();
+        $param['dokumentasi'] = $filename;
+        OKB::create($param);
+        Session::flash('success', 'berhasil di simpan');
+        return redirect('/pegawai/data/okb');
     }
+
     public function edit($id)
     {
         $data = OKB::find($id);
@@ -51,10 +53,17 @@ class OKBController extends Controller
     }
     public function update(Request $req, $id)
     {
-        $data = OKB::find($id)->update($req->all());
-        Session::flash('success', 'Berhasil Di update');
-
-        return redirect('/pegawai/data/okb');
+        if ($req->file == null) {
+            $filename = OKB::find($id)->dokumentasi;
+        } else {
+            $filename = time() . '_' . $req->file->getClientOriginalName();
+            $req->file('file')->storeAs('uploads', $filename, 'public');
+        }
+        $param = $req->all();
+        $param['dokumentasi'] = $filename;
+        $data = OKB::find($id)->update($param);
+        Session::flash('success', 'Berhasil Diupdate');
+        return redirect('/pegawai/data/okb'); //untuk kembali ke menu 
     }
     public function hapus($id)
     {

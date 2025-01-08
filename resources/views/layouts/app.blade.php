@@ -30,12 +30,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Main Header -->
-  <header class="main-header" style="background-color: #feba00">
+  <header class="main-header" style="background-color: #FFD700">
 
     <!-- Logo -->
     @if(Auth::user()->roles == 'admin')
 
- <a href="#" class="logo" style="background-color: #fea500">
+ <a href="#" class="logo" style="background-color: #FFD700">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">Admin</span>
       <!-- logo for regular state and mobile devices -->
@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </a>
 
 @else
- <a href="#" class="logo" style="background-color: #fea500">
+ <a href="#" class="logo" style="background-color: #FFD700">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">Petugas</span>
       <!-- logo for regular state and mobile devices -->
@@ -52,7 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 @endif
 
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation"  style="background-color: #fea500">
+    <nav class="navbar navbar-static-top" role="navigation"  style="background-color: #FFD700">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -86,7 +86,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
     </div>
     <!-- Default to the left -->
-    <strong>Admin</strong>
+    <strong>UPPD BANJARMASIN 1</strong>
   </footer>
 
   <!-- Control Sidebar -->

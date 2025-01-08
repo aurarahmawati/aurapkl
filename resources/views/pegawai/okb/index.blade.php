@@ -11,7 +11,7 @@
             <i class="ion ion-clipboard"></i><h3 class="box-title">Data Objek Kendaraan Bermotor</h3>
 
             <div class="box-tools">
-              <a href="/admin/data/user/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+              <a href="/pegawai/data/okb/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
             </div>
           </div>
           <!-- /.box-header -->
@@ -27,6 +27,7 @@
                 <th>Nama Sesuai STNK</th>
                 <th>Masa Berlaku</th>
                 <th>No HP</th>
+                <th>Dokumentasi</th>
                 <th>Aksi</th>
               </tr>
               @foreach ($data as $key => $item)
@@ -41,8 +42,12 @@
                 <td>{{$item->masalakupajak}}</td>
                 <td>{{$item->nohp}}</td>
                 <td>
-                  <a href="/pegawai/input/okb/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
-                  <a href="/pegawai/input/okb/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-danger" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i> Delete</a>
+                  <a href="/storage/uploads/{{$item->dokumentasi}}" target="_blank">lihat</a>
+                </td>
+                <td>
+                  <a href="/pegawai/data/okb/print/{{$item->id}}" class="btn btn-flat btn-sm btn-primary" target="_blank"><i class="fa fa-print"></i> print</a>
+                  <a href="/pegawai/data/okb/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                  <a href="/pegawai/data/okb/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-danger" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i> Delete</a>
                 </td>
               </tr>
               @endforeach

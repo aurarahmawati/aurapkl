@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OKBController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\OKBController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\MonitoringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,10 @@ Route::post('admin/data/pegawai/create', [PegawaiController::class, 'simpan']);
 Route::get('admin/data/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('admin/data/pegawai/edit/{id}', [PegawaiController::class, 'update']);
 Route::get('admin/data/pegawai/delete/{id}', [PegawaiController::class, 'hapus']);
+Route::get('admin/data/pegawai/detail/{id}', [PegawaiController::class, 'detail']);
+
+Route::get('admin/data/monitoring', [MonitoringController::class, 'index']);
+
 
 Route::get('pegawai/data/okb', [OKBController::class, 'index']);
 Route::get('pegawai/data/okb/create', [OKBController::class, 'tambah']);
@@ -51,3 +57,10 @@ Route::post('pegawai/data/okb/create', [OKBController::class, 'simpan']);
 Route::get('pegawai/data/okb/edit/{id}', [OKBController::class, 'edit']);
 Route::post('pegawai/data/okb/edit/{id}', [OKBController::class, 'update']);
 Route::get('pegawai/data/okb/delete/{id}', [OKBController::class, 'hapus']);
+Route::get('pegawai/data/okb/print/{id}', [OKBController::class, 'print']);
+
+
+Route::get('admin/data/laporan', [LaporanController::class, 'laporan']);
+Route::get('admin/data/laporan/pegawai', [LaporanController::class, 'laporan_pegawai']);
+
+Route::get('admin/data/pegawai/cari', [PegawaiController::class, 'cari']);
