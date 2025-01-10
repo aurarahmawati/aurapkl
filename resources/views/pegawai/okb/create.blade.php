@@ -6,7 +6,8 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="/pegawai/data/okb" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br /> <br />
+        <a href="/pegawai/data/okb" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br />
+        <br />
     </div>
 </div>
 
@@ -22,14 +23,14 @@
                 @csrf
 
                 <div class="box-body">
-                    
+
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Pelaksanaan kegiatan</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="pelaksanaankegiatan" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Hasil</label>
                         <div class="col-sm-10">
@@ -57,13 +58,12 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">roda</label>
                         <div class="col-sm-10">
-                          <select name="roda" class="form-control" required>
-                            <option value="">-pilih-</option>
-                           <option value="2">Roda 2</option>
-                           <option value="4">Roda 4</option>
-                         </select>
+                            <select name="roda" class="form-control" required>
+                                <option value="">-pilih-</option>
+                                <option value="2">Roda 2</option>
+                                <option value="4">Roda 4</option>
+                            </select>
                         </div>
-                    </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">nama pemilik stnk</label>
@@ -89,12 +89,16 @@
                             <input type="file" class="form-control" name="file" required>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-success pull-right"><i class="fa fa-save"></i> Simpan
+                                Data</button>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.box-body -->
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-success pull-right" ><i class="fa fa-save"></i> Simpan Data</button>
-                </div>
-                <!-- /.box-footer -->
+
             </form>
             <!-- /.box-body -->
         </div>

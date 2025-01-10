@@ -7,13 +7,14 @@ use App\Models\OKB;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class OKBController extends Controller
 {
     public function index()
     {
-        $data = OKB::paginate(10);
+        $data = OKB::where('pegawai_id', Auth::user()->pegawai_id)->paginate(10);
         return view('pegawai.okb.index', compact('data'));
     }
     public function print($id)
@@ -41,6 +42,7 @@ class OKBController extends Controller
         }
         $param = $req->all();
         $param['dokumentasi'] = $filename;
+        $param['pegawai_id'] = Auth::user()->pegawai_id;
         OKB::create($param);
         Session::flash('success', 'berhasil di simpan');
         return redirect('/pegawai/data/okb');
@@ -61,6 +63,7 @@ class OKBController extends Controller
         }
         $param = $req->all();
         $param['dokumentasi'] = $filename;
+        $param['pegawai_id'] = Auth::user()->pegawai_id;
         $data = OKB::find($id)->update($param);
         Session::flash('success', 'Berhasil Diupdate');
         return redirect('/pegawai/data/okb'); //untuk kembali ke menu 

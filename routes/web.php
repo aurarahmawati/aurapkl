@@ -49,6 +49,7 @@ Route::get('admin/data/pegawai/delete/{id}', [PegawaiController::class, 'hapus']
 Route::get('admin/data/pegawai/detail/{id}', [PegawaiController::class, 'detail']);
 
 Route::get('admin/data/monitoring', [MonitoringController::class, 'index']);
+Route::get('admin/data/monitoring/print/{id}', [MonitoringController::class, 'print']);
 
 
 Route::get('pegawai/data/okb', [OKBController::class, 'index']);

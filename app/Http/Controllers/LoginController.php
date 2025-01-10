@@ -26,7 +26,6 @@ class LoginController extends Controller
         $credential = $req->only('username', 'password');
 
         if (Auth::attempt($credential, true)) {
-
             if (Auth::user()->roles == 'admin') {
                 Session::flash('success', 'Selamat Datang');
                 return redirect('admin');

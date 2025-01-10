@@ -6,7 +6,8 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="/pegawai/data/okb" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br /> <br />
+        <a href="/pegawai/data/okb" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br />
+        <br />
     </div>
 </div>
 
@@ -18,22 +19,24 @@
                 <h3 class="box-title">Edit Data</h3>
             </div>
             <!-- /.box-header -->
-            <form class="form-horizontal" method="post" action="/pegawai/data/okb/edit/{{$data->id}}" enctype="multipart/form-data">
+            <form class="form-horizontal" method="post" action="/pegawai/data/okb/edit/{{$data->id}}"
+                enctype="multipart/form-data">
                 @csrf
 
                 <div class="box-body">
-                    
+
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Pelaksanaan kegiatan</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pelaksanaankegiatan" value="{{$data->pelaksanaankegiatan}}" required>
+                            <input type="text" class="form-control" name="pelaksanaankegiatan"
+                                value="{{$data->pelaksanaankegiatan}}" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Hasil</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="hasil"  value="{{$data->hasil}}" required>
+                            <input type="text" class="form-control" name="hasil" value="{{$data->hasil}}" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -59,21 +62,23 @@
                         <div class="col-sm-10">
                             <select name="roda" class="form-control" required>
                                 <option value="">-pilih-</option>
-                                <option value="2" {{$data->roda == 'roda2' ? 'selected':''}}>Roda 2</option>
-                                <option value="4" {{$data->roda == 'roda4' ? 'selected':''}}>Roda 4</option>
+                                <option value="2" {{$data->roda == '2' ? 'selected':''}}>Roda 2</option>
+                                <option value="4" {{$data->roda == '4' ? 'selected':''}}>Roda 4</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">nama pemilik stnkl</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="namapemiliksesuaistnk" value="{{$data->namapemiliksesuaistnk}}" required>
+                            <input type="text" class="form-control" name="namapemiliksesuaistnk"
+                                value="{{$data->namapemiliksesuaistnk}}" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">masa laku pajak</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="masalakupajak" value="{{$data->masalakupajak}}" required>
+                            <input type="text" class="form-control" name="masalakupajak"
+                                value="{{$data->masalakupajak}}" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -81,18 +86,19 @@
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="nohp" value="{{$data->nohp}}" required>
                         </div>
-                    </div> 
+                    </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Upload</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" name="file" required>
+                            <input type="file" class="form-control" name="file">
                         </div>
                     </div>
 
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-success pull-right" ><i class="fa fa-save"></i> Update Data</button>
+                    <button type="submit" class="btn btn-success pull-right"><i class="fa fa-save"></i> Update
+                        Data</button>
                 </div>
                 <!-- /.box-footer -->
             </form>

@@ -42,8 +42,17 @@
             <td style="vertical-align: top"><strong>III.</strong></td>
             <td><strong>DOKUMENTASI</strong><br />
                 {{$data->nopol}}, {{$data->nama}}, {{$data->alamat}} <br />
+                @php
+                $filePath = public_path('/storage/uploads/'.$data->dokumentasi);
+                @endphp
+
+                @if (file_exists($filePath))
                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('/storage/uploads/'.$data->dokumentasi))) }}"
                     width="70px">
+                @else
+
+                @endif
+
             </td>
         </tr>
         <br />
