@@ -28,7 +28,7 @@
           <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
-              <tbody><tr style="background-color:#FFD700">>
+              <tbody><tr style="background-color:#FFD700">
                 <th style="border: 1px solid black">No</th>
                 <th style="border: 1px solid black">Nik</th>
                 <th style="border: 1px solid black">Nip</th>

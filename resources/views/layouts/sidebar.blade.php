@@ -16,8 +16,8 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="/admin/data/laporan/pegawai" target="_blank"><i class="fa fa-circle-o"></i> Laporan Pegawai</a></li>
-          <li><a href="/kasubag/data/laporan/surattugas" target="_blank"><i class="fa fa-circle-o"></i> Surattugas</a></li>
-          <li><a href="/kasubag/data/laporan/sppd" target="_blank"><i class="fa fa-circle-o"></i> SPPD</a></li>
+          <li><a href="/admin/data/laporan/okb" target="_blank"><i class="fa fa-circle-o"></i> Laporan OKB</a></li>
+          <li><a href="/admin/data/laporan/pegawai" target="_blank"><i class="fa fa-circle-o"></i> Laporan Monitoring</a></li>
         </ul>
       </li>
     <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
@@ -30,6 +30,7 @@
     <ul class="sidebar-menu" data-widget="tree">
     <li class="header">MENU UTAMA</li>
     <li class="{{ (request()->is('pegawai')) ? 'active' : '' }}"><a href="/admin"><i class="fa fa-home"></i> <span>Beranda</span></a></li>
+    <li class="{{ (request()->is('pegawai/data/okb*')) ? 'active' : '' }}"><a href="/pegawai/data/okb"><i class="fa fa-users"></i> <span>Arsip SuratTugas</span></a></li>
     <li class="{{ (request()->is('pegawai/data/okb*')) ? 'active' : '' }}"><a href="/pegawai/data/okb"><i class="fa fa-users"></i> <span>Input OKB</span></a></li>
     <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
     </ul>

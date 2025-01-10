@@ -63,5 +63,6 @@ Route::get('pegawai/data/okb/print/{id}', [OKBController::class, 'print']);
 
 Route::get('admin/data/laporan', [LaporanController::class, 'laporan']);
 Route::get('admin/data/laporan/pegawai', [LaporanController::class, 'laporan_pegawai']);
+Route::get('admin/data/laporan/okb', [LaporanController::class, 'laporan_okb']);
 
 Route::get('admin/data/pegawai/cari', [PegawaiController::class, 'cari']);
