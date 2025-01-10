@@ -7,7 +7,19 @@
     <li class="{{ (request()->is('admin/data/user*')) ? 'active' : '' }}"><a href="/admin/data/user"><i class="fa fa-users"></i> <span>Data User</span></a></li>
     <li class="{{ (request()->is('admin/data/pegawai*')) ? 'active' : '' }}"><a href="/admin/data/pegawai"><i class="fa fa-users"></i> <span>Data Pegawai</span></a></li>
     <li class="{{ (request()->is('admin/data/monitoring*')) ? 'active' : '' }}"><a href="/admin/data/monitoring"><i class="fa fa-users"></i> <span>Monitoring</span></a></li>
-    <li class="{{ (request()->is('admin/data/laporan*')) ? 'active' : '' }}"><a href="/admin/data/laporan"><i class="fa fa-users"></i> <span>Laporan</span></a></li>
+    <li class="treeview">
+        <a href="#">
+          <i class="fa fa-file"></i> <span>Laporan</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="/admin/data/laporan/pegawai" target="_blank"><i class="fa fa-circle-o"></i> Laporan Pegawai</a></li>
+          <li><a href="/kasubag/data/laporan/surattugas" target="_blank"><i class="fa fa-circle-o"></i> Surattugas</a></li>
+          <li><a href="/kasubag/data/laporan/sppd" target="_blank"><i class="fa fa-circle-o"></i> SPPD</a></li>
+        </ul>
+      </li>
     <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
     </ul>
     

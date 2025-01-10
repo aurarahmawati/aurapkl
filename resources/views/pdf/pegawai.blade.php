@@ -34,7 +34,7 @@
             <th>NIK</th>
             <th>NIP</th>
             <th>Nama</th>
-            <th>JenisKelamin</th>
+            <th>Jkel</th>
             <th>Alamat</th>
             <th>Telp</th>
             <th>Pangkat</th>

@@ -28,22 +28,22 @@
           <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
-              <tbody><tr>
-                <th>No</th>
-                <th>Nik</th>
-                <th>Nip</th>
-                <th>Nama</th>
-                <th>Jabatan</th>
-                <th>Aksi</th>
+              <tbody><tr style="background-color:#FFD700">>
+                <th style="border: 1px solid black">No</th>
+                <th style="border: 1px solid black">Nik</th>
+                <th style="border: 1px solid black">Nip</th>
+                <th style="border: 1px solid black">Nama</th>
+                <th style="border: 1px solid black">Jabatan</th>
+                <th style="border: 1px solid black">Aksi</th>
               </tr>
               @foreach ($data as $key => $item)
               <tr>
-                <td>{{1 + $key}}</td>
-                <td>{{$item->nik}}</td>
-                <td>{{$item->nip}}</td>
-                <td>{{$item->nama}}</td>
-                <td>{{$item->jabatan}}</td>
-                <td>
+                <td style="border: 1px solid black">{{1 + $key}}</td>
+                <td style="border: 1px solid black">{{$item->nik}}</td>
+                <td style="border: 1px solid black">{{$item->nip}}</td>
+                <td style="border: 1px solid black">{{$item->nama}}</td>
+                <td style="border: 1px solid black">{{$item->jabatan}}</td>
+                <td style="border: 1px solid black;display:flex">
                   <a href="/admin/data/pegawai/detail/{{$item->id}}" class="btn btn-flat btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                   <a href="/admin/data/pegawai/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-edit"></i></a>
                   <a href="/admin/data/pegawai/delete/{{$item->id}}" class="btn btn-flat btn-sm btn-danger" onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i></a>
