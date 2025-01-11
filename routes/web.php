@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OKBController;
+use App\Http\Controllers\SptController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
@@ -60,8 +61,16 @@ Route::post('pegawai/data/okb/edit/{id}', [OKBController::class, 'update']);
 Route::get('pegawai/data/okb/delete/{id}', [OKBController::class, 'hapus']);
 Route::get('pegawai/data/okb/print/{id}', [OKBController::class, 'print']);
 
+Route::get('pegawai/data/spt', [SptController::class, 'index']);
+Route::get('pegawai/data/spt/create', [SptController::class, 'tambah']);
+Route::post('pegawai/data/spt/create', [SptController::class, 'simpan']);
+Route::get('pegawai/data/spt/edit/{id}', [SptController::class, 'edit']);
+Route::post('pegawai/data/spt/edit/{id}', [SptController::class, 'update']);
+Route::get('pegawai/data/spt/delete/{id}', [SptController::class, 'hapus']);
+
 
 Route::get('admin/data/laporan', [LaporanController::class, 'laporan']);
 Route::get('admin/data/laporan/pegawai', [LaporanController::class, 'laporan_pegawai']);
+Route::get('admin/data/laporan/okb', [LaporanController::class, 'laporan_okb']);
 
 Route::get('admin/data/pegawai/cari', [PegawaiController::class, 'cari']);

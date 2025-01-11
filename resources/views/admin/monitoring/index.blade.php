@@ -20,18 +20,18 @@
       <div class="box-body table-responsive no-padding">
         <table class="table table-hover">
           <tbody>
-            <tr>
-              <th>No</th>
-              <th>Nama Pegawai</th>
-              <th>Jumlah Input OKB</th>
-              <th>Detail Yg Di Input</th>
+            <tr tr style="background-color:#FFD700">
+              <th style="border: 1px solid black">No</th>
+              <th style="border: 1px solid black">Nama Pegawai</th>
+              <th style="border: 1px solid black">Jumlah Input OKB</th>
+              <th style="border: 1px solid black">Detail Yg Di Input</th>
             </tr>
             @foreach ($pegawai as $key => $item)
             <tr>
-              <td>{{1 + $key}}</td>
-              <td>{{$item->nama}}</td>
-              <td>{{$item->jumlah_input}}</td>
-              <td>
+              <td style="border: 1px solid black">{{1 + $key}}</td>
+              <td style="border: 1px solid black">{{$item->nama}}</td>
+              <td style="border: 1px solid black">{{$item->jumlah_input}}</td>
+              <td style="border: 1px solid black">
                 @if ($item->jumlah_input == 0)
                 -
                 @else

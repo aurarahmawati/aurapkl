@@ -15,6 +15,10 @@
           <div class="box-body">
             <a href="/admin/data/laporan/pegawai" class="btn btn-md btn-success" target="_blank">LAPORAN PEGAWAI</a>
           </div>
+           <!-- /.box-header -->
+           <div class="box-body">
+            <a href="/admin/data/laporan/okb" class="btn btn-md btn-success" target="_blank">LAPORAN OKB</a>
+          </div>
           <!-- /.box-body -->
         </div>
         
