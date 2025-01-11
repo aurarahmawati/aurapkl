@@ -72,6 +72,8 @@ Route::get('pegawai/data/spt/delete/{id}', [SptController::class, 'hapus']);
 
 Route::get('admin/data/laporan', [LaporanController::class, 'laporan']);
 Route::get('admin/data/laporan/pegawai', [LaporanController::class, 'laporan_pegawai']);
+Route::get('admin/data/laporan/pegawaipns', [LaporanController::class, 'laporan_pegawaipns']);
+Route::get('admin/data/laporan/pegawaitekon', [LaporanController::class, 'laporan_pegawaitekon']);
 Route::get('admin/data/laporan/okb', [LaporanController::class, 'laporan_okb']);
 Route::get('admin/data/laporan/spt', [LaporanController::class, 'laporan_spt']);
 Route::get('admin/data/laporan/monitoring', [LaporanController::class, 'laporan_monitoring']);

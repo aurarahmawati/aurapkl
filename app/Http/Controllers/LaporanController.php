@@ -25,6 +25,24 @@ class LaporanController extends Controller
         ])->setPaper([0, 0, 800, 1300], 'landscape');
         return $pdf->stream($filename);
     }
+    public function laporan_pegawaipns()
+    {
+        $filename = Carbon::now()->format('d-m-Y-H-i-s') . '_pegawai.pdf';
+        $data = Pegawai::where('status_pegawai', 'PNS')->get();
+        $pdf = Pdf::loadView('pdf.pegawaipns', compact('data'))->setOption([
+            'enable_remote' => true,
+        ])->setPaper([0, 0, 800, 1300], 'landscape');
+        return $pdf->stream($filename);
+    }
+    public function laporan_pegawaitekon()
+    {
+        $filename = Carbon::now()->format('d-m-Y-H-i-s') . '_pegawai.pdf';
+        $data = Pegawai::where('status_pegawai', 'TEKON')->get();
+        $pdf = Pdf::loadView('pdf.pegawaitekon', compact('data'))->setOption([
+            'enable_remote' => true,
+        ])->setPaper([0, 0, 800, 1300], 'landscape');
+        return $pdf->stream($filename);
+    }
 
     public function laporan_okb()
     {
