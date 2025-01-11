@@ -85,7 +85,7 @@ class PegawaiController extends Controller
     public function cari()
     {
         $cari = request()->get('cari');
-        $data = Pegawai::where('nama', 'LIKE', '%' . $cari . '%')->get();
+        $data = Pegawai::where('nama', 'LIKE', '%' . $cari . '%')->orWhere('nik', 'LIKE', '%' . $cari . '%')->paginate(10);
         return view('admin.pegawai.index', compact('data'));
     }
 

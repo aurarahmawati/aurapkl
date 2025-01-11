@@ -37,9 +37,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
  <a href="#" class="logo" style="background-color: #FFD700">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">Admin</span>
+      <span class="logo-mini" style="color: black">Admin</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b></span>
+      <span class="logo-lg" style="color: black"><b>Admin</b></span>
     </a>
 
 @else
