@@ -5,17 +5,6 @@
 @section('content')
 
 <div class="row">
-<<<<<<< HEAD
-  <div class="col-md-12">
-    <div class="box box-primary">
-      <div class="box-header">
-        <i class="ion ion-clipboard"></i>
-        <h3 class="box-title">Data Objek Kendaraan Bermotor</h3>
-
-        <div class="box-tools">
-          <a href="/pegawai/data/okb/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah
-            Data</a>
-=======
     <div class="col-md-12">
         <div class="box box-primary">
           <div class="box-header">
@@ -64,7 +53,6 @@
             </tbody></table>
           </div>
           <!-- /.box-body -->
->>>>>>> 3ee9905d39e0c2fe84e79c704c50bb3a2f78c779
         </div>
       </div>
       <!-- /.box-header -->
