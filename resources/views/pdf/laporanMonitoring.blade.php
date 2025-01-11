@@ -53,7 +53,7 @@
             <td style="text-align: center">{{$item->jumlah_input}}</td>
             <td>
                 @if ($item->jumlah_input == 0)
-                -
+                --
                 @else
                 <ul>
                     @foreach ($item->okb as $item2)
