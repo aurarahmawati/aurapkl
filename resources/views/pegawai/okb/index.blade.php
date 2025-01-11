@@ -35,7 +35,7 @@
             @foreach ($data as $key => $item)
             <tr>
               <td style="border: 1px solid black">{{1 + $key}}</td>
-              <td style="border: 1px solid black">{{$item->created_at}}</td>
+              <td style="border: 1px solid black">{{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}</td>
               <td style="border: 1px solid black">{{$item->nama}}</td>
               <td style="border: 1px solid black">{{$item->alamat}}</td>
               <td style="border: 1px solid black">{{$item->nopol}}</td>

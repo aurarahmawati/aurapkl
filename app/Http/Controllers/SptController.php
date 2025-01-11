@@ -14,7 +14,12 @@ class SptController extends Controller
         $data = Spt::paginate(10);
         return view('pegawai.spt.index', compact('data'));
     }
-    
+    public function cari()
+    {
+        $cari = request()->get('cari');
+        $data = Spt::where('nomor', 'LIKE', '%' . $cari . '%')->paginate(10);
+        return view('pegawai.spt.index', compact('data'));
+    }
     public function tambah()
     {
         return view('pegawai.spt.create');
@@ -35,7 +40,7 @@ class SptController extends Controller
         Session::flash('success', 'berhasil di simpan');
         return redirect('/pegawai/data/spt');
     }
-    
+
     public function edit($id)
     {
         $data = Spt::find($id);
@@ -46,13 +51,6 @@ class SptController extends Controller
     {
         $data = Spt::find($id)->delete();
         return back();
-    }
-
-    public function cari()
-    {
-        $cari = request()->get('cari');
-        $data = Spt::where('nama', 'LIKE', '%' . $cari . '%')->get();
-        return view('pegawai.spt.index', compact('data'));
     }
 
     public function update(Request $req, $id)

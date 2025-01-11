@@ -61,6 +61,7 @@ Route::post('pegawai/data/okb/edit/{id}', [OKBController::class, 'update']);
 Route::get('pegawai/data/okb/delete/{id}', [OKBController::class, 'hapus']);
 Route::get('pegawai/data/okb/print/{id}', [OKBController::class, 'print']);
 
+Route::get('pegawai/data/spt/cari', [SptController::class, 'cari']);
 Route::get('pegawai/data/spt', [SptController::class, 'index']);
 Route::get('pegawai/data/spt/create', [SptController::class, 'tambah']);
 Route::post('pegawai/data/spt/create', [SptController::class, 'simpan']);
