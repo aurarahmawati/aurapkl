@@ -27,21 +27,16 @@
         </tr>
     </table>
     <hr>
-    <h3 style="text-align: center">LAPORAN OBJEK KENDARAAN BERMOTOR <br>
+    <h3 style="text-align: center">LAPORAN MONITORING <br>
 
     </h3>
     <br />
     <table width="100%" border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>No</th>
-            <th>Tanggal</th>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>Nopol</th>
-            <th>Roda</th>
-            <th>Nama Sesuai STNK</th>
-            <th>Masa Berlaku</th>
-            <th>NO HP</th>
+            <th>Nama Pegawai</th>
+            <th>Jumlah Input OKB</th>
+            <th>Detail Yg Di Input</th>
         </tr>
         @php
         $no =1;
@@ -49,15 +44,23 @@
 
         @foreach ($data as $key => $item)
         <tr>
-            <td>{{$key + 1}}</td>
-            <td style="border: 1px solid black">{{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}</td>
+            <td>{{1 + $key}}</td>
             <td>{{$item->nama}}</td>
-            <td>{{$item->alamat}}</td>
-            <td>{{$item->nopol}}</td>
-            <td>{{$item->roda}}</td>
-            <td>{{$item->namapemiliksesuaistnk}}</td>
-            <td>{{$item->masalakupajak}}</td>
-            <td>{{$item->nohp}}</td>
+            <td style="text-align: center">{{$item->jumlah_input}}</td>
+            <td>
+                @if ($item->jumlah_input == 0)
+                -
+                @else
+                <ul>
+                    @foreach ($item->okb as $item2)
+                    <li>{{\Carbon\Carbon::parse($item2->created_at)->translatedFormat('d F Y')}} - Nama pemilik :
+                        {{$item2->nama}}
+                    </li>
+                    @endforeach
+                </ul>
+                @endif
+            </td>
+
         </tr>
         @endforeach
     </table>

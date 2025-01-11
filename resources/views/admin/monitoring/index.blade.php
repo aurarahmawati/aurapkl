@@ -46,10 +46,7 @@
                 </ul>
                 @endif
               </td>
-              {{-- <td>
-                <a href="/admin/data/user/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-danger"><i
-                    class="fa fa-eye"></i> Lihat Laporan</a>
-              </td> --}}
+            
             </tr>
             @endforeach
           </tbody>
