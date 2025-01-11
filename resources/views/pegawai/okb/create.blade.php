@@ -74,7 +74,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">masa laku pajak</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="masalakupajak" required>
+                            <input type="date" class="form-control" name="masalakupajak" required>
                         </div>
                     </div>
                     <div class="form-group">

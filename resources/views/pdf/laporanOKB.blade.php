@@ -50,7 +50,7 @@
         @foreach ($data as $key => $item)
         <tr>
             <td>{{$key + 1}}</td>
-            <td style="border: 1px solid black">{{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}</td>
+            <td>{{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}</td>
             <td>{{$item->nama}}</td>
             <td>{{$item->alamat}}</td>
             <td>{{$item->nopol}}</td>
@@ -70,8 +70,8 @@
                 Pimpinan/Admin<br />
                 <br /><br /><br /><br />
 
-                <u>Drs. H. A.M. Rozaniansyah</u><br />
-                NIP. 19620516 198701 1 015
+                <u>Aura Rahmawati</u><br />
+                NIP. 2110010355
             </td>
         </tr>
     </table>

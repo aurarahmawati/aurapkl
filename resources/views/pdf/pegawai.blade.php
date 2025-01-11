@@ -71,8 +71,8 @@
             Pimpinan/Admin<br/>
              <br/><br/><br/><br/>
 
-            <u>Drs. H. A.M. Rozaniansyah</u><br/>
-            NIP. 19620516 198701 1 015
+            <u>Aura Rahmawati</u><br/>
+            NIP. 2110010355
             </td>
         </tr>
     </table>

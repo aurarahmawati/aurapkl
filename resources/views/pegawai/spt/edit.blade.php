@@ -48,13 +48,13 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Tanggal Masuk</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tgl_masuk" value="{{$data->tgl_masuk}}" required>
+                            <input type="date" class="form-control" name="tgl_masuk" value="{{$data->tgl_masuk}}" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Tanggal Berlaku</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tgl_berlaku" value="{{$data->tgl_berlaku}}" required>
+                            <input type="date" class="form-control" name="tgl_berlaku" value="{{$data->tgl_berlaku}}" required>
                         </div>
                     </div>
                     <div class="form-group">

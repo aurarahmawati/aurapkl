@@ -5,6 +5,9 @@
 @section('content')
 <div class="row">
   <div class="col-md-12">
+      <a href="/admin/data/pegawai" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br /> <br />
+  </div>
+</div>
 
     <!-- Profile Image -->
     <div class="box box-primary">

@@ -45,9 +45,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 @else
  <a href="#" class="logo" style="background-color: #FFD700">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">Petugas</span>
+      <span class="logo-mini" style="color: black">Petugas</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Petugas</b></span>
+      <span class="logo-lg" style="color: black"><b>Petugas</b></span>
     </a>
 @endif
 

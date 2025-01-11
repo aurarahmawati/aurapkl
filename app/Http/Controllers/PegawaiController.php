@@ -20,7 +20,13 @@ class PegawaiController extends Controller
     }
     public function simpan(Request $req)
     {
-        if ($req->nip == null) {
+
+        $check = Pegawai::where('nik', $req->nik)->first();
+        if ($check != null) {
+            Session::flash('warning', 'nik Sudah ada');
+            $req->flash();
+            return back();
+        } else {
             DB::beginTransaction();
 
             try {
@@ -36,31 +42,6 @@ class PegawaiController extends Controller
                 DB::rollback();
                 Session::flash('error', 'Gagal sistem');
                 return back();
-            }
-        } else {
-
-            $check = Pegawai::where('nip', $req->nip)->first();
-            if ($check != null) {
-                Session::flash('warning', 'nip Sudah ada');
-                $req->flash();
-                return back();
-            } else {
-                DB::beginTransaction();
-
-                try {
-
-                    Pegawai::create($req->all());
-
-                    DB::commit();
-
-                    Session::flash('success', 'berhasil di simpan');
-                    return redirect('/admin/data/pegawai');
-                } catch (\Exception $e) {
-
-                    DB::rollback();
-                    Session::flash('error', 'Gagal sistem');
-                    return back();
-                }
             }
         }
     }

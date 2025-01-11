@@ -11,7 +11,7 @@ class SptController extends Controller
 {
     public function index()
     {
-        $data = Spt::paginate(10);
+        $data = Spt::where('pegawai_id', Auth::user()->pegawai_id)->paginate(10);
         return view('pegawai.spt.index', compact('data'));
     }
     public function cari()

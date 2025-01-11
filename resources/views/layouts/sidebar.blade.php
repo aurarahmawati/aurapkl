@@ -19,7 +19,10 @@
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="/admin/data/laporan/pegawai" target="_blank"><i class="fa fa-circle-o"></i> Laporan Pegawai</a>
+        <li><a href="/admin/data/laporan/pegawaipns" target="_blank"><i class="fa fa-circle-o"></i> Laporan Pegawai</a>
+        </li>
+        
+        <li><a href="/admin/data/laporan/pegawaitekon" target="_blank"><i class="fa fa-circle-o"></i> Laporan Pegawai</a>
         </li>
         <li><a href="/admin/data/laporan/okb" target="_blank"><i class="fa fa-circle-o"></i> Laporan OKB</a></li>
         <li><a href="/admin/data/laporan/spt" target="_blank"><i class="fa fa-circle-o"></i> Laporan SPT</a></li>

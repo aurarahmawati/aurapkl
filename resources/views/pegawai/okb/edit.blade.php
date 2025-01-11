@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">nama pemilik stnkl</label>
+                        <label class="col-sm-2 control-label">nama pemilik stnk</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="namapemiliksesuaistnk"
                                 value="{{$data->namapemiliksesuaistnk}}" required>
@@ -77,7 +77,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">masa laku pajak</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="masalakupajak"
+                            <input type="date" class="form-control" name="masalakupajak"
                                 value="{{$data->masalakupajak}}" required>
                         </div>
                     </div>

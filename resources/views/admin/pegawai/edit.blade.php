@@ -1,4 +1,4 @@
->@extends('layouts.app')
+@extends('layouts.app')
 @push('css')
 
 @endpush
@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="/admin/data/pegawai" class="btn btn-flat btn-primary"><i class="fa fa-backward"></i> Kembali</a> <br /> <br />
+        <a href="/admin/data/pegawai" class="btn btn-flat btn-warning"><i class="fa fa-backward"></i> Kembali</a> <br /> <br />
     </div>
 </div>
 
