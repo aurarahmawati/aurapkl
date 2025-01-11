@@ -43,6 +43,10 @@
         @endphp
 
         @foreach ($data as $key => $item)
+        @if ($item->jumlah_input == 0)
+
+        @else
+
         <tr>
             <td>{{1 + $key}}</td>
             <td>{{$item->nama}}</td>
@@ -62,6 +66,7 @@
             </td>
 
         </tr>
+        @endif
         @endforeach
     </table>
 
