@@ -43,7 +43,8 @@
             @endforeach
           </tbody>
         </table>
-
+      </div>
+      <div class="box-footer">
         {{$data->links()}}
       </div>
       <!-- /.box-body -->
