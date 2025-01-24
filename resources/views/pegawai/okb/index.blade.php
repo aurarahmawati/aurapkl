@@ -46,7 +46,8 @@
               <td style="border: 1px solid black">
                 <a href="/storage/uploads/{{$item->dokumentasi}}" target="_blank">lihat</a>
               </td>
-              <td style="border: 1px solid black;display:flex">
+              {{-- <td  style="border: 1px solid black;"></td> --}}
+              <td style="border: 1px solid black;display:">
                 <a href="/pegawai/data/okb/print/{{$item->id}}" class="btn btn-flat btn-sm btn-warning"
                   target="_blank"><i class="fa fa-print"></i> print</a>
                 <a href="/pegawai/data/okb/edit/{{$item->id}}" class="btn btn-flat btn-sm btn-primary"><i

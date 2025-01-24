@@ -50,7 +50,7 @@ class LaporanController extends Controller
         $data = OKB::get();
         $pdf = Pdf::loadView('pdf.laporanOKB', compact('data'))->setOption([
             'enable_remote' => true,
-        ])->setPaper('a4', 'landscape');
+        ])->setPaper([0, 0, 800, 1300], 'landscape');
         return $pdf->stream($filename);
     }
     public function laporan_spt()
@@ -59,7 +59,7 @@ class LaporanController extends Controller
         $data = Spt::get();
         $pdf = Pdf::loadView('pdf.laporanSPT', compact('data'))->setOption([
             'enable_remote' => true,
-        ])->setPaper('a4', 'landscape');
+        ])->setPaper([0, 0, 800, 1000], 'landscape');
         return $pdf->stream($filename);
     }
     public function laporan_monitoring()

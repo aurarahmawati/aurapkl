@@ -39,8 +39,6 @@
             <th>Jkel</th>
             <th>Alamat</th>
             <th>Telp</th>
-            <th>Pangkat</th>
-            <th>Golongan</th>
             <th>Jabatan</th>
             <th>StatusPegawai</th>
         </tr>
@@ -56,8 +54,6 @@
             <td>{{$item->jenis_kelamin}}</td>
             <td>{{$item->alamat}}</td>
             <td>{{$item->telp}}</td>
-            <td>{{$item->pangkat}}</td>
-            <td>{{$item->golongan}}</td>
             <td>{{$item->jabatan}}</td>
             <td>{{$item->status_pegawai}}</td>
         </tr>

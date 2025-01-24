@@ -44,7 +44,7 @@
     <li class="{{ (request()->is('pegawai')) ? 'active' : '' }}"><a href="/admin"><i class="fa fa-home"></i>
         <span>Beranda</span></a></li>
     <li class="{{ (request()->is('pegawai/data/spt*')) ? 'active' : '' }}"><a href="/pegawai/data/spt"><i
-          class="fa fa-users"></i> <span>Arsip SuratTugas</span></a></li>
+          class="fa fa-file"></i> <span>Arsip SuratTugas</span></a></li>
     <li class="{{ (request()->is('pegawai/data/okb*')) ? 'active' : '' }}"><a href="/pegawai/data/okb"><i
           class="fa fa-users"></i> <span>Input OKB</span></a></li>
     <li><a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>

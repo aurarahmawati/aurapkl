@@ -17,7 +17,7 @@ class SptController extends Controller
     public function cari()
     {
         $cari = request()->get('cari');
-        $data = Spt::where('nomor', 'LIKE', '%' . $cari . '%')->paginate(10);
+        $data = Spt::where('nomor', 'LIKE', '%' . $cari . '%')->orWhere('nomor', 'LIKE', '%' . $cari . '%')->paginate(10);
         return view('pegawai.spt.index', compact('data'));
     }
     public function tambah()

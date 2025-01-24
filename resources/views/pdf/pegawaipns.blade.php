@@ -34,6 +34,7 @@
     <table width="100%" border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>No</th>
+            <th>NIK</th>
             <th>NIP</th>
             <th>Nama</th>
             <th>Jkel</th>
@@ -51,6 +52,7 @@
         @foreach ($data as $key => $item)
         <tr>
             <td>{{$key + 1}}</td>
+            <td>{{$item->nik}}</td>
             <td>{{$item->nip}}</td>
             <td>{{$item->nama}}</td>
             <td>{{$item->jenis_kelamin}}</td>

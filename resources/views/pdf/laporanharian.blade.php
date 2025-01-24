@@ -48,7 +48,7 @@
 
                 @if (file_exists($filePath))
                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('/storage/uploads/'.$data->dokumentasi))) }}"
-                    width="70px">
+                    width="200px">
                 @else
 
                 @endif
