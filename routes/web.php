@@ -41,6 +41,7 @@ Route::get('admin/data/user/edit/{id}', [UserController::class, 'edit']);
 Route::post('admin/data/user/edit/{id}', [UserController::class, 'update']);
 Route::get('admin/data/user/delete/{id}', [UserController::class, 'hapus']);
 
+Route::get('admin/data/pegawai/cari', [PegawaiController::class, 'cari']);
 Route::get('admin/data/pegawai', [PegawaiController::class, 'index']);
 Route::get('admin/data/pegawai/create', [PegawaiController::class, 'tambah']);
 Route::post('admin/data/pegawai/create', [PegawaiController::class, 'simpan']);
@@ -77,6 +78,3 @@ Route::get('admin/data/laporan/pegawaitekon', [LaporanController::class, 'lapora
 Route::get('admin/data/laporan/okb', [LaporanController::class, 'laporan_okb']);
 Route::get('admin/data/laporan/spt', [LaporanController::class, 'laporan_spt']);
 Route::get('admin/data/laporan/monitoring', [LaporanController::class, 'laporan_monitoring']);
-
-
-Route::get('admin/data/pegawai/cari', [PegawaiController::class, 'cari']);

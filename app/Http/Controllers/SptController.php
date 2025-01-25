@@ -17,9 +17,15 @@ class SptController extends Controller
     public function cari()
     {
         $cari = request()->get('cari');
-        $data = Spt::where('nomor', 'LIKE', '%' . $cari . '%')->orWhere('nomor', 'LIKE', '%' . $cari . '%')->paginate(10);
+        // Mendapatkan id pegawai dari user yang sedang login
+        $pegawaiId = Auth::user()->pegawai_id;
+        // Menambahkan filter pegawai_id pada query
+        $data = Spt::where('nomor', 'LIKE', '%' . $cari . '%')
+            ->where('pegawai_id', $pegawaiId) // Filter berdasarkan pegawai_id
+            ->paginate(10);
         return view('pegawai.spt.index', compact('data'));
     }
+
     public function tambah()
     {
         return view('pegawai.spt.create');

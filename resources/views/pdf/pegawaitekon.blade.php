@@ -27,7 +27,7 @@
         </tr>
     </table>
     <hr>
-    <h3 style="text-align: center">LAPORAN PEGAWAI <br>
+    <h3 style="text-align: center">LAPORAN PEGAWAI TENAGA KONTRAK  <br>
 
     </h3>
     <br />

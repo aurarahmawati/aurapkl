@@ -20,7 +20,7 @@
     <div class="box box-primary">
       <div class="box-header">
         <i class="ion ion-clipboard"></i>
-        <h3 class="box-title">Data Surat Tugas</h3>
+        <h3 class="box-title">Data Surat Tugas Door To Door</h3>
 
         <div class="box-tools">
           <a href="/pegawai/data/spt/create" class="btn btn-flat btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah
