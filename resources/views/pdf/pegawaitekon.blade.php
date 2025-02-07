@@ -68,8 +68,8 @@
                 Pimpinan/Admin<br />
                 <br /><br /><br /><br />
 
-                <u>Aura Rahmawati</u><br />
-                NIP. 2110010355
+                <u>ANNI HANISYAH, SE,MM</u><br />
+                NIP. 19670505 198907 2 001
             </td>
         </tr>
     </table>
