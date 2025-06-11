@@ -63,21 +63,24 @@
                 telah dilaksanakan oleh Pelaksana Tugas.
             </td>
         </tr>
+        </table>
         <br />
-        <tr>
-            <td style="vertical-align: top"><strong></strong></td>
-            <td><strong></strong><br />
-                Dibuat di Banjarmasin, Tanggal : {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}
+        <br />
+        Dibuat di Banjarmasin, Tanggal : {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}
+        <table width="100%">
+            <tr>
+                <td width="70%" style="vertical-align: top">
+                    Yang Melaksanakan Kegiatan :<br /><br /><br /><br /><br />
+
+                    (.....................)<br />
+                    {{$data->pegawai->nama}}
             </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top"><strong></strong></td>
-            <td><strong></strong><br />
-                Yang Melaksanakan Kegiatan :<br /><br /><br /><br /><br />
+            <td style="vertical-align: top">
+                Pimpinan<br />
+                <br /><br /><br /><br />
 
-                (.....................)<br />
-                {{Auth::user()->name}}
-
+                <u>ANNI HANISYAH, SE,MM</u><br />
+                NIP. 19670505 198907 2 001
             </td>
         </tr>
     </table>

@@ -53,6 +53,7 @@
                                 <option value="">-pilih-</option>
                                 <option value="admin" {{$data->roles == 'admin' ? 'selected':''}}>admin</option>
                                 <option value="pegawai"  {{$data->roles == 'pegawai' ? 'selected':''}}>pegawai</option>
+                                <option value="pimpinan"  {{$data->roles == 'pimpinan' ? 'selected':''}}>pimpinan</option>
                             </select>
                         </div>
                     </div>

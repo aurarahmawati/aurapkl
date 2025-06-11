@@ -21,11 +21,11 @@
         <table class="table table-hover table-bordered">
           <tbody>
             <tr style="background-color: #FFD700">
-              <th style="border: 1px solid black">No</th>
-              <th style="border: 1px solid black">Nama</th>
-              <th style="border: 1px solid black"> Username</th>
-              <th style="border: 1px solid black"> Roles</th>
-              <th style="border: 1px solid black"> Aksi</th>
+              <th style="border: 1px solid black">NO</th>
+              <th style="border: 1px solid black">NAMA</th>
+              <th style="border: 1px solid black"> USERNAME</th>
+              <th style="border: 1px solid black"> ROLES</th>
+              <th style="border: 1px solid black"> AKSI</th>
             </tr>
             @foreach ($data as $key => $item)
             <tr>

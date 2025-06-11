@@ -53,6 +53,7 @@
                                 <option value="">-pilih-</option>
                                 <option value="admin">admin</option>
                                 <option value="pegawai">pegawai</option>
+                                <option value="pimpinan">pimpinan</option>
                             </select>
                         </div>
                     </div>

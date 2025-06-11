@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Jkel</label>
+                        <label class="col-sm-2 control-label">StatusPegawai</label>
                         <div class="col-sm-10">
                             <select name="status_pegawai" class="form-control" required>
                                 <option value="">-pilih-</option>

@@ -16,6 +16,10 @@ class LoginController extends Controller
             } elseif (Auth::user()->roles == 'pegawai') {
                 return redirect('pegawai');
             }
+            elseif (Auth::user()->roles == 'pimpinan') {
+                return redirect('pimpinan');
+            }
+            
         }
 
         return view('login');
@@ -33,6 +37,10 @@ class LoginController extends Controller
             if (Auth::user()->roles == 'pegawai') {
                 Session::flash('success', 'Selamat Datang');
                 return redirect('pegawai');
+            }
+            if (Auth::user()->roles == 'pimpinan') {
+                Session::flash('success', 'Selamat Datang');
+                return redirect('pimpinan');
             }
         } else {
             Session::flash('error', 'username/password salah');

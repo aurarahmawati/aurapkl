@@ -71,7 +71,7 @@
             <td width="60%"></td>
             <td></td>
             <td><br />Banjarmasin, {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
-                Pimpinan/Admin<br />
+                Pimpinan<br />
                 <br /><br /><br /><br />
 
                 <u>ANNI HANISYAH, SE,MM</u><br />

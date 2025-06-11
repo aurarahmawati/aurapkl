@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OKBController;
 use App\Http\Controllers\SptController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\MonitoringController;
+use App\Http\Controllers\PimpinanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,7 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::get('admin', [HomeController::class, 'admin']);
 Route::get('pegawai', [HomeController::class, 'pegawai']);
+Route::get('pimpinan', [HomeController::class, 'pimpinan']);
 
 Route::get('admin/data/user', [UserController::class, 'index']);
 Route::get('admin/data/user/create', [UserController::class, 'tambah']);
@@ -78,3 +81,17 @@ Route::get('admin/data/laporan/pegawaitekon', [LaporanController::class, 'lapora
 Route::get('admin/data/laporan/okb', [LaporanController::class, 'laporan_okb']);
 Route::get('admin/data/laporan/spt', [LaporanController::class, 'laporan_spt']);
 Route::get('admin/data/laporan/monitoring', [LaporanController::class, 'laporan_monitoring']);
+
+Route::get('admin/data/jadwal/cari', [JadwalController::class, 'cari']);
+Route::get('admin/data/jadwal', [JadwalController::class, 'index']);
+Route::get('admin/data/jadwal/create', [JadwalController::class, 'tambah']);
+Route::post('admin/data/jadwal/create', [JadwalController::class, 'simpan']);
+Route::get('admin/data/jadwal/edit/{id}', [JadwalController::class, 'edit']);
+Route::post('admin/data/jadwal/edit/{id}', [JadwalController::class, 'update']);
+Route::get('admin/data/jadwal/delete/{id}', [JadwalController::class, 'hapus']);
+
+Route::get('pegawai/data/jadwal', [JadwalController::class, 'index']);
+
+Route::get('pimpinan/data/pimpinan', [PimpinanController::class, 'index']);
+Route::get('pimpinan/data/monitoring', [MonitoringController::class, 'index']);
+Route::get('pimpinan/data/monitoring/print/{id}', [MonitoringController::class, 'print']);
